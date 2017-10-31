@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+<h1>{{app.nom}} {{app.version}}</h1>
+
+
+  <ion-item>
+    <ion-label fixed>Nom</ion-label>
+    <ion-input type="text" [(ngModel)]="app.nom"></ion-input>
+  </ion-item>
+
+    <ion-item>
+    <ion-label fixed>Version</ion-label>
+    <ion-input type="number" [(ngModel)]="app.version"></ion-input>
+  </ion-item>
+
+
+
+  <button ion-button secondary (click)="presentActionSheet()">Fais toi connaître dans les log !</button>
+
+
+</ion-content>
