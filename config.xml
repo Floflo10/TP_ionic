@@ -87,4 +87,6 @@
         <variable name="UPDATE_METHOD" value="auto" />
     </plugin>
     <plugin name="cordova-plugin-camera" spec="^2.4.1" />
+    <plugin name="cordova-base64-to-gallery" spec="^4.1.3" />
+    <engine name="android" spec="~6.3.0" />
 </widget>

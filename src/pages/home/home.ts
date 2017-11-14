@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Camera, CameraOptions} from '@ionic-native/camera';
+import { Base64ToGallery } from '@ionic-native/base64-to-gallery';
 
 @Component({
   selector: 'page-home',
@@ -16,7 +17,7 @@ export class HomePage {
 
   app: AppData;
 
-  constructor(private camera:Camera, public navCtrl: NavController) {
+  constructor(private camera:Camera, public navCtrl: NavController, private base64ToGallery: Base64ToGallery) {
     this.app = new AppData("Nom", 0.4);
 
   }
@@ -40,6 +41,11 @@ export class HomePage {
     }, (err) => {
       console.log(err);
     });
+
+  this.base64ToGallery.base64ToGallery(this.base64Image, { prefix: '_img' }).then(
+  res => console.log('Saved image to gallery ', res),
+  err => console.log('Error saving image to gallery ', err)
+);
   }
 
 
