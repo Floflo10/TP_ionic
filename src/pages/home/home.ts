@@ -42,13 +42,14 @@ export class HomePage {
       console.log(err);
     });
 
-  this.base64ToGallery.base64ToGallery(this.base64Image, { prefix: '_img' }).then(
+  }
+
+save() {
+    this.base64ToGallery.base64ToGallery(this.base64Image, { prefix: '_img' }).then(
   res => console.log('Saved image to gallery ', res),
   err => console.log('Error saving image to gallery ', err)
 );
-  }
-
-
+}
 
 }
 

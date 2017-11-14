@@ -27,6 +27,8 @@
 
   <button ion-button secondary (click)="takePicture()">Souriez !</button>
 
+  <button ion-button secondary (click)="save()">Sauver !</button>
+
   <p>Ta tête:</p>
   <img [src]="base64Image" *ngIf="base64Image" />
 
