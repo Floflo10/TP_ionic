@@ -5,7 +5,7 @@ import { Base64ToGallery } from '@ionic-native/base64-to-gallery';
 
 @Component({
   selector: 'page-home',
-  providers: [Camera],
+  providers: [Camera, Base64ToGallery],
   templateUrl: 'home.html'
 })
 
