@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+//import { GeolocPageModule } = require("../pages/geoloc/geoloc.module.ts");
 import { Camera, CameraOptions} from '@ionic-native/camera';
 import { Base64ToGallery } from '@ionic-native/base64-to-gallery';
 
@@ -45,7 +46,7 @@ export class HomePage {
   }
 
 save() {
-    this.base64ToGallery.base64ToGallery(this.base64Image, { prefix: '_img' }).then(
+    this.base64ToGallery.base64ToGallery(this.base64Image, { prefix: '_img', mediaScanner: true }).then(
   res => console.log('Saved image to gallery ', res),
   err => console.log('Error saving image to gallery ', err)
 );
