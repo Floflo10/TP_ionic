@@ -22,14 +22,21 @@
     <ion-input type="number" [(ngModel)]="app.version"></ion-input>
   </ion-item>
 
+    <ion-item>
+    <ion-label fixed>Parler</ion-label>
+    <ion-input type="text" [(ngModel)]="app.speech"></ion-input>
+  </ion-item>
+
 
   <button ion-button secondary (click)="presentActionSheet()">Fais toi connaître dans les log !</button>
+
+  <button ion-button secondary (click)="talk()">JE VEUX PARLER !</button>
 
   <button ion-button secondary (click)="takePicture()">Souriez !</button>
 
   <button ion-button secondary (click)="save()">Sauver !</button>
 
   <p>Ta tête:</p>
-  <img [src]="base64Image" *ngIf="base64Image" />
+  <img [src]="printPicture" *ngIf="printPicture" />
 
 </ion-content>

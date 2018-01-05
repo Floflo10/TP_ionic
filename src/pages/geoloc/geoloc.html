@@ -7,7 +7,10 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>geoloc</ion-title>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Geoloc</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -22,11 +25,9 @@
   </p>
   <p>
     Longitude : {{longitude}}
+  </p> <br>
+  Pour ceux qui veulent du temps-réel <br>
+  <p *ngFor= "let tab of GeoTab">
+    Latitude : {{tab.Latit}}, Longitude : {{tab.Longi}} fdsq : {{tab.lolita}}
   </p>
-<div ng-repeat="poslat in couille()">
-    <p>
-    test : {{position}}
-    test : {{poslng}}
-  </p>
-</div>
 </ion-content>

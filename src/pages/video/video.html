@@ -7,12 +7,16 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>video</ion-title>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Video</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-<button ion-button (click)="startrecording()">Start</button>
+  <button ion-button (click)="startrecording()">Veux-tu être une star?</button>
+  <video #myvideo height="300" width="300" controls></video>
 </ion-content>

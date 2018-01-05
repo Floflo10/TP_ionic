@@ -7,11 +7,17 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { GeolocPageModule } from '../pages/geoloc/geoloc.module';
 import { VideoPageModule } from '../pages/video/video.module';
+import { ScannerPageModule } from '../pages/scanner/scanner.module';
+
 import { Geolocation } from '@ionic-native/geolocation';
-import { MediaCapture, MediaFile, CaptureError, CaptureImageOptions } from '@ionic-native/media-capture';
+import { MediaCapture } from '@ionic-native/media-capture';
 import { Toast } from '@ionic-native/toast';
 import { LocalNotifications } from '@ionic-native/local-notifications';
+import { TextToSpeech } from '@ionic-native/text-to-speech';
 import { Vibration } from '@ionic-native/vibration';
+import { Shake } from '@ionic-native/shake';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+import { SocialSharing } from '@ionic-native/social-sharing';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -26,7 +32,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     BrowserModule,
     IonicModule.forRoot(MyApp),
     GeolocPageModule,
-    VideoPageModule
+    VideoPageModule,
+    ScannerPageModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -42,6 +49,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     Toast,
     LocalNotifications,
     Vibration,
+    TextToSpeech,
+    Shake,
+    BarcodeScanner,
+    SocialSharing,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
