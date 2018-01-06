@@ -53,8 +53,8 @@ export class HomePage {
 
   save() {
     this.base64ToGallery.base64ToGallery(this.base64Image, { prefix: '_img', mediaScanner: true }).then(
-      res => console.log('Saved image to gallery ', res),
-      err => console.log('Error saving image to gallery ', err)
+      res => console.log('Enregistré dans la gallerie ', res),
+      err => console.log('Phillipe, on a une erreur ', err)
 
       );
     this.localNotifications.schedule({
@@ -67,11 +67,11 @@ export class HomePage {
 
   }
 
-talk() {
-  this.tts.speak({text: this.app.speech, locale: 'fr-FR'})
-  .then(() => console.log('Success'))
-  .catch((reason: any) => console.log(reason));
-}
+  talk() {
+    this.tts.speak({text: this.app.speech, locale: 'fr-FR'})
+    .then(() => console.log('Ça compile ! '))
+    .catch((reason: any) => console.log(reason));
+  }
 
 }
 

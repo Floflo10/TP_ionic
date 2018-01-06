@@ -15,6 +15,7 @@ import { Geolocation } from '@ionic-native/geolocation';
    providers: [Geolocation],
    templateUrl: 'geoloc.html',
  })
+
  export class GeolocPage {
 
    longitude: number;

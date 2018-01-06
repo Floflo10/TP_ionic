@@ -4,10 +4,15 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+import { GeolocPage } from '../pages/geoloc/geoloc';
+import { VideoPage } from '../pages/video/video';
+import { ScannerPage } from '../pages/scanner/scanner';
+import { GmapPage } from '../pages/gmap/gmap';
+
 import { GeolocPageModule } from '../pages/geoloc/geoloc.module';
 import { VideoPageModule } from '../pages/video/video.module';
 import { ScannerPageModule } from '../pages/scanner/scanner.module';
+import { GmapPageModule } from '../pages/gmap/gmap.module';
 
 import { Geolocation } from '@ionic-native/geolocation';
 import { MediaCapture } from '@ionic-native/media-capture';
@@ -18,6 +23,8 @@ import { Vibration } from '@ionic-native/vibration';
 import { Shake } from '@ionic-native/shake';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { SocialSharing } from '@ionic-native/social-sharing';
+import { Gyroscope } from '@ionic-native/gyroscope';
+import { GoogleMaps } from '@ionic-native/google-maps';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -25,8 +32,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
-    ListPage
+    HomePage
   ],
   imports: [
     BrowserModule,
@@ -34,12 +40,16 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     GeolocPageModule,
     VideoPageModule,
     ScannerPageModule,
+    GmapPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage
+    GeolocPage,
+    VideoPage,
+    ScannerPage,
+    GmapPage
   ],
   providers: [
     StatusBar,
@@ -53,6 +63,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     Shake,
     BarcodeScanner,
     SocialSharing,
+    Gyroscope,
+    GoogleMaps,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
