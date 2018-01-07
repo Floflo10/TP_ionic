@@ -35,3 +35,16 @@ $ npm cordova platform add android
 $ npm cordova run android
 ```
 
+## Bug Fixe:
+
+**Lors de mon build/run j'obtiens une erreur "Execution failed for task ':mergeDebugResources'."**
+
+C'est un problème qui survient lorsque Cordova ajoute la platforme demandée et que l'installation bloque à " Generating platform resources: X / 18 complete".
+Pour régler ce problème voir ci-dessous.
+
+**Que faire lorsque l'installation bloque à " Generating platform resources: X / 18 complete".**
+
+Il existe deux solution:
+
+1. Recommencer jusqu'a ce que les ressources soient correctement générer.
+2. Utiliser les ressources présentent sur ce dépot juste aprés l'installation.
