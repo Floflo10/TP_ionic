@@ -1,5 +1,27 @@
-Ingésup B3 - Martines Florian
+# TP Ionic
 
+[![npm version](https://badge.fury.io/js/npm.svg)](https://badge.fury.io/js/npm)
+
+*Ingésup B3 - Martines Florian*
+
+**IMPORTANT**
+La version de NPM utilisée pour le tp est la **5.6.0**. Malgrés cela, des problèmes avec des dépendances peuvent survenir.
+
+## Répartition des "Autre Fonctionnalité"
+
+* Page Home
+  * Vibration
+  * TextToSpeech
+* Page Scanner
+  * Toast
+* Page Video
+  * Toast
+  * Shake
+  * BarcodeScanner
+  * SocialSharing
+* Page Gmap
+  * GoogleMaps
+  * Gyroscope
 
 This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
 
